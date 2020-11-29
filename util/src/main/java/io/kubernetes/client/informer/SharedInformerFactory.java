@@ -145,12 +145,12 @@ public class SharedInformerFactory {
           CallGenerator callGenerator,
           Class<ApiType> apiTypeClass,
           Class<ApiListType> apiListTypeClass) {
-    if (apiClient.getHttpClient().readTimeoutMillis() > 0) {
-      // set read timeout zero to ensure client doesn't time out
-      OkHttpClient httpClient =
-          apiClient.getHttpClient().newBuilder().readTimeout(0, TimeUnit.MILLISECONDS).build();
-      apiClient.setHttpClient(httpClient);
-    }
+//    if (apiClient.getHttpClient().readTimeoutMillis() > 0) {
+//      // set read timeout zero to ensure client doesn't time out
+//      OkHttpClient httpClient =
+//          apiClient.getHttpClient().newBuilder().readTimeout(0, TimeUnit.MILLISECONDS).build();
+//      apiClient.setHttpClient(httpClient);
+//    }
     return new ListerWatcher<ApiType, ApiListType>() {
       @Override
       public ApiListType list(CallGeneratorParams params) throws ApiException {
