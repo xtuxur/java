@@ -104,7 +104,7 @@ public class ReflectorRunnable<
                   new CallGeneratorParams(
                       Boolean.TRUE,
                       lastSyncResourceVersion,
-                      Long.valueOf(Duration.ofMinutes(2).toMillis()).intValue()));
+                      Long.valueOf(Duration.ofMinutes(5).toMillis()).intValue()));
           watchHandler(watch);
         } catch (Throwable t) {
           log.debug("Exception happened but not isConnectException(t)");
