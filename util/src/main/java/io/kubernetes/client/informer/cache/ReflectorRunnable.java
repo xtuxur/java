@@ -109,6 +109,7 @@ public class ReflectorRunnable<
         } catch (Throwable t) {
           log.debug("Exception happened but not isConnectException(t)");
           log.debug("message:{} cause:{}",t.getMessage(),t.getCause());
+          t.printStackTrace();
           if (isConnectException(t)) {
             // If this is "connection refused" error, it means that most likely
             // apiserver is not
